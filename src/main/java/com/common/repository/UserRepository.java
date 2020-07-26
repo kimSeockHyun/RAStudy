@@ -1,11 +1,13 @@
-package com.user.login.repository;
+package com.common.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.user.login.model.Users;
+import com.common.model.Users;
 
 @Repository
 public interface UserRepository extends JpaRepository<Users, Long>{
-	Users findByUserIdAndUserPw(String user_id, String user_pw);
+	
+	Users findByUserIdAndPassword(String user_id, String password);
+	
 }

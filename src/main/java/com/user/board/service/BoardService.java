@@ -1,17 +1,17 @@
-package com.user.login.service;
+package com.user.board.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.common.model.Users;
 import com.security.UserDetails;
-import com.user.login.model.Users;
-import com.user.login.repository.UserRepository;
+import com.user.board.repository.BoardRepository;
 
-public class LoginService {
+public class BoardService {
 
 	@Autowired
-	private UserRepository userRepository;
+	private BoardRepository boardRepository;
 	
 	
 public UserDetails loginChk(String userId, String userPwd) {
@@ -21,7 +21,7 @@ public UserDetails loginChk(String userId, String userPwd) {
 		UserDetails userDetails = new UserDetails();
 		
 		String hash512= "";
-		Users userInfo  = userRepository.findByUserIdAndUserPw(userId, hash512);
+		Users userInfo  = boardRepository.findByUserIdAndPassword(userId, hash512);
 		
 		
 		Optional<Users> optUser = Optional.ofNullable(userInfo);

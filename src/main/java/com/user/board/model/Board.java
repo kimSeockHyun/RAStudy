@@ -1,4 +1,4 @@
-package com.user.login.model;
+package com.user.board.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,8 +14,8 @@ import javax.persistence.Table;
 		  sequenceName = "MEMBER_SEQ", 
 		  initialValue = 1,
 		  allocationSize = 1)
-@Table(name = "users")
-public class Users {
+@Table(name = "TB_BOARD")
+public class Board {
 	
 	@Id 
 	@GeneratedValue( strategy = GenerationType.SEQUENCE
