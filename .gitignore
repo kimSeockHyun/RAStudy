@@ -5,6 +5,9 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+### 제외 폴더
+bin/
+
 ### STS ###
 .apt_generated
 .classpath
@@ -33,4 +36,4 @@ out/
 ### VS Code ###
 .vscode/
 
-.bin/
+
