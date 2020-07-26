@@ -18,6 +18,11 @@ public class LoginController {
 	public String main( HttpServletRequest request, HttpServletResponse response, ModelAndView mav )throws Exception {
 		return "index";
 	}   
+	 // 로그인 페이지
+	@GetMapping(value = "/1")
+	public String main2( HttpServletRequest request, HttpServletResponse response, ModelAndView mav )throws Exception {
+		return "index2";
+	}   
 	
 	 // 로그인 페이지
 	@GetMapping(value = "/user/login")
