@@ -20,7 +20,7 @@ public class LoginController {
 	@GetMapping(value = "/login")
 	public String login( HttpServletRequest request, HttpServletResponse response, ModelAndView mav )throws Exception {
 		return "login";
-	} 
+	}
 	
 	
 }

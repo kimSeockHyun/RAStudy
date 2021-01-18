@@ -15,7 +15,7 @@ import javax.persistence.Table;
 		  initialValue = 1,
 		  allocationSize = 1)
 @Table(name = "TB_BOARD")
-public class Board {
+public class Board_bak {
 	
 	@Id 
 	@GeneratedValue( strategy = GenerationType.SEQUENCE

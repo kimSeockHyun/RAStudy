@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.common.model.Users;
 import com.security.UserDetails;
-import com.user.board.repository.BoardRepository;
+import com.user.board.repository.MemberInfoRepository;
 
-public class BoardService {
+public class MemberInfoService {
 
 	@Autowired
-	private BoardRepository boardRepository;
+	private MemberInfoRepository memberInfoRepository;
 	
 	
 public UserDetails loginChk(String userId, String userPwd) {
@@ -21,7 +21,7 @@ public UserDetails loginChk(String userId, String userPwd) {
 		UserDetails userDetails = new UserDetails();
 		
 		String hash512= "";
-		Users userInfo  = boardRepository.findByUserIdAndPassword(userId, hash512);
+		Users userInfo  = memberInfoRepository.findByUserIdAndPassword(userId, hash512);
 		
 		
 		Optional<Users> optUser = Optional.ofNullable(userInfo);
